@@ -5,11 +5,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "Hello world"
 
 @app.route('/Day1')
 def Day1():
-    return render_template('Day1.html')
+    return render_template('Day1/Day1.html')
+
+@app.route('/Day2')
+def Day2():
+    return render_template('Day2/index.html')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
