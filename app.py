@@ -15,9 +15,9 @@ def Day1():
 def Day2():
     return render_template('Day2/index.html')
 
-@app.route('/img/')
-def image():
-    return 
+@app.route('<name>')
+def router():
+    return render_template('%s' % name)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
