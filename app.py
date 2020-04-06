@@ -15,7 +15,7 @@ def Day1():
 def Day2():
     return render_template('Day2/index.html')
 
-@app.route('<name>')
+@app.route('/<name>')
 def router(name):
     return render_template('%s' % name)
 
