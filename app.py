@@ -16,7 +16,7 @@ def Day2():
     return render_template('Day2/index.html')
 
 @app.route('<name>')
-def router():
+def router(name):
     return render_template('%s' % name)
 
 if __name__ == "__main__":
